@@ -1,0 +1,25 @@
+{
+  "name": "websockets-server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "client-ws": "tsx watch client.ts",
+    "server": "nodemon -w ./server/index.ts ./server/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "systeminformation": "^5.21.15",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@types/ws": "^8.5.8",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
