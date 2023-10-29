@@ -9,12 +9,11 @@ wss.on('connection', (ws) => {
 	ws.on('message', (data) => {
 		console.log('received: %s', data)
 		ws.send(`Hello it's server, you sent -> ${data}`)
-
 	})
 
 	ws.send('starting')
 	setInterval(async () => {
-		const loadData = await si.currentLoad();
+		const loadData = await si.currentLoad()
 		ws.send(`load: ${loadData.currentLoad}, cpus: ${loadData.cpus.length}`)
-	}, 2_000);
+	}, 2_000)
 })
