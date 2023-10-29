@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-
+import { useEffect, useState } from 'react'
 
 export const App = () => {
 	const [ws, setWs] = useState<WebSocket>()
@@ -19,7 +18,7 @@ export const App = () => {
 			// Listen for messages
 			wsc.addEventListener('message', (event: MessageEvent<string>) => {
 				console.log('Message from server: ', event.data)
-				setMessages(prevMessages => [...prevMessages, event.data])
+				setMessages((prevMessages) => [...prevMessages, event.data])
 			})
 
 			// Connection closed
@@ -49,7 +48,9 @@ export const App = () => {
 	return (
 		<div>
 			<h1>WebSocket Example</h1>
-			<button onClick={() => sendMessage('Hi from React!')}>Send Message</button>
+			<button onClick={() => sendMessage('Hi from React!')}>
+				Send Message
+			</button>
 			<ul>
 				{messages.map((message, index) => (
 					<li key={index}>{message}</li>
